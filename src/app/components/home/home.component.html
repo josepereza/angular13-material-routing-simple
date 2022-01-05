@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<ng-container *ngIf="paginaService.listado">
+    <div class="circulo">
+    </div>
+
+    <div class="container">
+        <div @entrada-izq class="izquierda">
+            <h2>Joyas <span>Pasion</span></h2>
+            <p>Nuestras joyas <span style="color:rgb(59, 110, 8); font-size: 2em; margin: 10px;">Pasion</span> </p>
+            <p>Deja que su magia te cautive</p>
+            <button mat-flat-button (click)="cambioPagina">Start</button>
+
+        </div>
+        <div @entrada-derecha class="derecha">
+            <img src="../../../assets/images/diamante2.png" width="90%" alt="">
+        </div>
+
+
+    </div>
+
+</ng-container>
+<ng-container *ngIf="!paginaService.listado">
+    <app-formulario></app-formulario>
+    <button class="button2" (click)="paginaService.cambioListado">Back</button>
+
+</ng-container>

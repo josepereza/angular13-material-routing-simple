@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="formulario">
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <h2>Formulario</h2>
+    
+            <label for="first-name">First Name: </label>
+            <input id="first-name" type="text" formControlName="firstName">
+          
+            <label for="last-name">Last Name: </label>
+            <input id="last-name" type="text" formControlName="lastName">
+            <p>Complete the form to enable button.</p>
+            <button type="submit" [disabled]="!profileForm.valid">Send</button>
+  
+        </form>
+    
+    
+    </div>
+    <div class="listado">
+        <h2>Listado</h2>
+    <ul >
+        <li  @entrada-derecha *ngFor="let usuario of usuarios" >
+          {{usuario.lastName}},{{usuario.firstName}}
+        </li>
+    </ul>
+
+    </div>
+</div>
