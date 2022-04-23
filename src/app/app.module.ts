@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ServicesComponent } from './components/services/services.component';
+import {Ng2EventsModule} from "ng2-events";
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { ServicesComponent } from './components/services/services.component';
     NavbarComponent,
     HomeComponent,
     FormularioComponent,
-    ServicesComponent
+    ServicesComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2EventsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
